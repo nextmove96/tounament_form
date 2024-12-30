@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Russo+One&family=Play:wght@400;700&family=Chakra+Petch:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #00ff9d;
+    --secondary-color: #ff0055;
+    --background-dark: #0a0a0a;
+    --text-light: #ffffff;
+    --accent-color: #4a00e0;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background: linear-gradient(135deg, var(--background-dark) 0%, #1a1a1a 100%);
+    color: var(--text-light);
+    font-family: 'Play', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.data {
+    font-family: 'Chakra Petch', sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.data strong {
+    color: var(--primary-color);
+    font-family: 'Russo One', sans-serif;
+}
+
+.qr-section {
+    text-align: center;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 2rem auto;
+    border: 1px solid rgba(74, 0, 224, 0.2);
+}
+
+.qr-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.qr-section img {
+    max-width: 200px;
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.form-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(74, 0, 224, 0.1);
+    border: 1px solid rgba(74, 0, 224, 0.2);
+}
+
+.form-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: 'Play', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.form-group input[type="file"] {
+    border: 2px dashed rgba(0, 255, 157, 0.3);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.image-preview {
+    max-width: 200px;
+    margin-top: 1rem;
+    display: none;
+    border-radius: 8px;
+}
+button[type="submit"] {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: var(--background-dark);
+    font-family: 'Orbitron', sans-serif;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--primary-color); }
+    50% { box-shadow: 0 0 20px var(--primary-color); }
+    100% { box-shadow: 0 0 5px var(--primary-color); }
+}
+.form-group select {
+    width: 93.5%;
+}
+option {
+    background: #1f1f1f;
+}
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+img {
+    border-radius: 125px;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .form-section {
+        padding: 1.5rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .data {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .form-group select {
+        width: 98%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
+    
+    .qr-section {
+        margin: 1rem;
+    }
+    
+    button[type="submit"] {
+        padding: 0.8rem 1.5rem;
+    }
+    .form-group select {
+        width: 98%;
+    }
+}
